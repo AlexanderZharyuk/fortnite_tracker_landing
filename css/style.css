@@ -105,6 +105,7 @@ header {
     align-items: center;
     flex-direction: column;
     margin-bottom: 50px;
+    height: 600px;
 }
 
 .top-players > h1 {

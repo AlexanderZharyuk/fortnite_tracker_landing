@@ -1,3 +1,7 @@
+:root {
+    --gutter: 15px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -105,10 +109,11 @@ header {
     align-items: center;
     flex-direction: column;
     margin-bottom: 50px;
-    height: 600px;
+    height: 100%;
 }
 
 .top-players > h1 {
+    text-align: center;
     color: #fff;
     font-size: 40px;
     text-transform: uppercase;
@@ -117,6 +122,8 @@ header {
 .top-players-cards {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
 }
 
 .player-card {
@@ -158,11 +165,14 @@ header {
 }
 
 .player-card > button {
-    margin-left: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
     background-color: #fff;
     border: solid 2px #fff;
     width: 100px;
-    height: 50px;
+    height: 40px;
     color:rgb(0, 211, 193);
     cursor: pointer;
     transition: 0.2s;
@@ -212,7 +222,7 @@ header {
 }
 
 .statistic-block {
-    width: 400px;
+    width: 35%;
     background-color: #fff;
     border: soild 4px #fff;
     display: flex;
@@ -223,6 +233,7 @@ header {
 
 .statistic-block > h3 {
     color: rgb(0, 211, 193);
+    text-align: center;
 }
 
 .center {
@@ -249,4 +260,76 @@ footer > div > h3 {
 footer > div > p {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.712);
+}
+
+@media screen and (max-width: 992px) {
+    .player-card:hover {
+        margin-top: 0px;
+    }
+
+    .col-lg-3 {
+        width: calc(25% - var(--gutter));
+    }
+    
+    .col-lg-4 {
+        width: calc(33.33% - var(--gutter));
+        margin: 15px auto;
+    }
+    
+    .col-lg-6 {
+        width: calc(50% - var(--gutter));
+    }
+    
+    .col-lg-12 {
+        width: calc(100% - var(--gutter));
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .player-card:hover {
+        margin-top: 0px;
+    }
+
+    .col-md-3 {
+        width: calc(25% - var(--gutter));
+    }
+    
+    .col-md-4 {
+        width: calc(33.33% - var(--gutter));
+    }
+    
+    .col-md-6 {
+        width: calc(50% - var(--gutter));
+    }
+    
+    .col-md-12 {
+        width: calc(100% - var(--gutter));
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .player-card:hover {
+        margin-top: 0px;
+    }
+
+    .col-sm-3 {
+        width: calc(25% - var(--gutter));
+    }
+    
+    .col-sm-4 {
+        width: calc(33.33% - var(--gutter));
+    }
+    
+    .col-sm-6 {
+        width: calc(50% - var(--gutter));
+    }
+    
+    .col-sm-12 {
+        width: calc(100% - var(--gutter));
+    }
+
+    .statistic-block > h3 {
+        font-size: 17px;
+    }
 }
